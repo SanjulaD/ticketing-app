@@ -21,6 +21,7 @@ export const AddPosts = () => {
                 <div className="form-group p-2">
                     <label>Title</label>
                     <input
+                        required
                         value={title}
                         onChange={e => setTitle(e.target.value)}
                         className="form-control"

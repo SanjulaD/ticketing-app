@@ -11,9 +11,7 @@ const ListPosts = () => {
 
     const fetchPosts = async () => {
         const res = await axios.get('http://localhost:4000/posts')
-
         setPosts(res.data)
-        console.log(posts)
     }
 
     const renderedPosts = Object.values(posts).map(post => {
