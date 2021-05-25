@@ -1,10 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+<<<<<<< HEAD
 auth/node_modules
 
 .pnp.js
 
+=======
+client/node_modules
+posts/node_modules
+comments/node_modules
+client/.pnp
+.pnp.js
+
+# testing
+client/coverage
+
+# production
+client/build
+
+>>>>>>> 2bcca7a10fbfe8aaee2520d51784652206a51163
 # misc
 .env
 .DS_Store
@@ -15,4 +30,8 @@ auth/node_modules
 
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 yarn-error.log*
+=======
+yarn-error.log*
+>>>>>>> 2bcca7a10fbfe8aaee2520d51784652206a51163
