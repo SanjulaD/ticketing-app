@@ -3,7 +3,7 @@
 # dependencies
 <<<<<<< HEAD
 auth/node_modules
-
+.next
 .pnp.js
 
 =======
@@ -11,6 +11,7 @@ client/node_modules
 posts/node_modules
 comments/node_modules
 client/.pnp
+client/.next
 .pnp.js
 
 # testing
