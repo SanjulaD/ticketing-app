@@ -2,6 +2,7 @@ import express from "express";
 import "express-async-errors";
 import { json } from "body-parser";
 import mongoose from "mongoose";
+import cookieSession from "cookie-session";
 
 import { currentUserRouter } from "./routes/current-user";
 import { signinRouter } from "./routes/signIn";
@@ -13,7 +14,14 @@ import { NotFoundError } from "./errors/not-found";
 
 const app = express();
 
+app.set("trust proxy", true);
 app.use(json());
+app.use(
+  cookieSession({
+    signed: false,
+    secure: true,
+  })
+);
 
 app.use(currentUserRouter);
 app.use(signinRouter);
@@ -35,7 +43,7 @@ const start = async () => {
       useUnifiedTopology: true,
     });
 
-    console.log('Connected')
+    console.log("Connected");
   } catch (err) {
     console.error(err);
   }
@@ -49,6 +57,4 @@ app.get("/api/my", (req, res) => {
   res.send("helloo");
 });
 
-start()
-
-
+start();
